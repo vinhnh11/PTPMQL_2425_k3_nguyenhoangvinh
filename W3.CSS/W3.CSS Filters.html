@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<body>
+
+<div class="w3-container">
+  <h2>Filter Table</h2>
+  <p>Nguyen Hoang Vinh.</p>
+
+  <input class="w3-input w3-border w3-padding" type="text" placeholder="Search for names.." id="myInput" onkeyup="myFunction()">
+
+  <table class="w3-table-all w3-margin-top" id="myTable">
+    <tr>
+      <th style="width:60%;">Name</th>
+      <th style="width:40%;">Country</th>
+    </tr>
+    <tr>
+      <td>Hoang V
+        
+        inh</td>
+      <td>Viet Nam</td>
+    </tr>
+    <tr>
+      <td>vinhhhh</td>
+      <td>Viet Nam</td>
+    </tr>
+    <tr>
+      <td>vinhne</td>
+      <td>Viet Nam</td>
+    </tr>
+    <tr>
+      <td>vietnam</td>
+      <td>Viet Nam</td>
+    </tr>
+    <tr>
+      <td>tinkte</td>
+      <td>Viet Nam</td>
+    </tr>
+    <tr>
+      <td>Cntt</td>
+      <td>Viet Nam</td>
+    </tr>
+    <tr>
+      <td>Vinh Hoang</td>
+      <td>Viet Nam</td>
+    </tr>
+    <tr>
+      <td>Vinh nguyen</td>
+      <td>Viet Nam</td>
+    </tr>
+  </table>
+
+  <p><strong>Tip:</strong> Remove toUpperCase() if you want to perform a case-sensitive search.</p>
+  <p>Change tr[i].getElementsByTagName('td')[0] to [1] if you want to search for "Country" (index 1) instead of "Name" (index 0).</p>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
