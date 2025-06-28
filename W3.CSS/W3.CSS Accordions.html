@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<body>
+<div class="w3-container">
+
+<h2>Accordions</h2>
+<p>Nguyen Hoang Vinh:</p>
+  
+<button onclick="myFunction('Demo1')" class="w3-btn w3-block w3-black w3-left-align">Open Section 1</button>
+<div id="Demo1" class="w3-container w3-hide">
+  <h4>vinh</h4>
+  <p>nguyen..</p>
+</div>
+
+</div>
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+</body>
+</html>
+<!--
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<body>
+<div class="w3-container">
+
+<h2>Accordions</h2>
+<p>Nguyen Hoang Vinh:</p>
+
+<button onclick="myFunction('Demo1')" class="w3-button w3-block w3-black w3-left-align">
+Accordion 1</button>
+<div id="Demo1" class="w3-hide w3-border">
+  <ul class="w3-ul">
+    <li>vinh</li>
+    <li>nguyen</li>
+    <li>hoang</li>
+  </ul>  
+</div>
+
+</div>
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
+--> 
+<!---->
+<!--
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<body>
+<div class="w3-container">
+
+<h2>Accordion Width</h2>
+<p>Nguyen Hoang Vinh:</p>
+
+<div class="w3-grey w3-section" style="width:25%">
+  <button onclick="myFunction('Demo1')" class="w3-button w3-block">
+  25%</button>
+  <div id="Demo1" class="w3-hide w3-container">
+    <p>Nguyen hoang Vinh </p>
+  </div>
+</div>
+
+<div class="w3-dark-grey w3-section" style="width:50%">
+  <button onclick="myFunction('Demo2')" class="w3-button w3-block">
+  50%</button>
+  <div id="Demo2" class="w3-hide w3-container">
+    <p>nguyen hoan vinh</p>
+  </div>
+</div>
+
+<div class="w3-light-grey w3-section" style="width:75%">
+  <button onclick="myFunction('Demo3')" class="w3-button w3-block">
+  75%</button>
+  <div id="Demo3" class="w3-hide w3-container">
+    <p>Nguyen Hoang Vinh</p>
+  </div>
+</div>
+
+<div class="w3-light-grey w3-section">
+  <button onclick="myFunction('Demo4')" class="w3-button w3-block">
+  Default (100%)</button>
+  <div id="Demo4" class="w3-hide w3-container">
+    <p>nguyen Hoang vinh</p>
+  </div>
+</div>
+
+</div>
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
+--> 
