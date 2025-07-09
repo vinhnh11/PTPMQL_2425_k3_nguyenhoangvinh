@@ -22,10 +22,20 @@ namespace DemoMVC.Controllers
         }
 
         // GET: Person/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
+   public IActionResult Create()
+{
+    var lastPerson = _context.Persons
+        .OrderByDescending(p => p.PersonID)
+        .FirstOrDefault();
+
+    var lastID = lastPerson?.PersonID ?? "PS000";
+
+    var autoGen = new AutoGenerateCode();
+    string newPersonID = autoGen.GenerateCode(lastID);
+
+    ViewBag.NewPersonID = newPersonID;
+    return View();
+}
 
         // POST: Person/Create
         [HttpPost]
@@ -128,4 +138,4 @@ namespace DemoMVC.Controllers
             return _context.Persons.Any(e => e.PersonID == id);
         }
     }
-}
+} 
