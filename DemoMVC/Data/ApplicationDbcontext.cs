@@ -10,5 +10,7 @@ namespace DemoMVC.Data
         {
         }
         public DbSet<Person> Persons { get; set; } = null!;
+       public DbSet<Daily> Dailys { get; set; }
+        public DbSet<Hethongphanphoi> Hethongphanphois { get; set; }
     }
 } 

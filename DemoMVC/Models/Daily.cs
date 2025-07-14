@@ -1,8 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 namespace DemoMVC.Models;
 
-public class DaiLy
-{
+public class Daily
+{ 
+    [Key]
     public string MaDaiLy { get; set; }
     public string TenDaiLy { get; set; }
     public string DiaChi { get; set; }
@@ -10,5 +11,5 @@ public class DaiLy
     public string MaHTPP { get; set; }
     public string Dienthoai { get; set; }
 
-    
+      public Hethongphanphoi Hethongphanphoi { get; set; }
 }

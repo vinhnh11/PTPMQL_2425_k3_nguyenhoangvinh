@@ -360,3 +360,4 @@ C:\Users\ASUS\Documents\NguyenHoangVinh-PTPMQL\DemoMVC\obj\Debug\net9.0\refint\D
 C:\Users\ASUS\Documents\NguyenHoangVinh-PTPMQL\DemoMVC\obj\Debug\net9.0\DemoMVC.pdb
 C:\Users\ASUS\Documents\NguyenHoangVinh-PTPMQL\DemoMVC\obj\Debug\net9.0\DemoMVC.genruntimeconfig.cache
 C:\Users\ASUS\Documents\NguyenHoangVinh-PTPMQL\DemoMVC\obj\Debug\net9.0\ref\DemoMVC.dll
+C:\Users\ASUS\Documents\NguyenHoangVinh-PTPMQL\DemoMVC\obj\Debug\net9.0\DemoMVC.sourcelink.json
