@@ -3,8 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using DemoMVC.Data;
 using DemoMVC.Models;
 using DemoMVC.Models.Process;
-using OfficeOpenXml; 
-
+using OfficeOpenXml;
+using X.PagedList;
+using Microsoft.AspNetCore.Mvc.Rendering; 
 namespace DemoMVC.Controllers
 {
     public class PersonController : Controller
@@ -17,6 +18,23 @@ namespace DemoMVC.Controllers
             _context = context;
             _excelProcess = new ExcelProcess();
         }
+       /*public async Task<IActionResult> Index(int? page, int? PageSize)
+{
+    ViewBag.PageSize = new List<SelectListItem>()
+    {
+        new SelectListItem() { Value="3", Text= "3" },
+        new SelectListItem() { Value="5", Text= "5" },
+        new SelectListItem() { Value="10", Text= "10" },
+        new SelectListItem() { Value="15", Text= "15" },
+        new SelectListItem() { Value="25", Text= "25" },
+        new SelectListItem() { Value="50", Text= "50" },
+    };
+
+    int pagesize = (PageSize ?? 3);
+    ViewBag.psize = pagesize;
+    var model = _context.Persons.ToList().ToPagedList(page ?? 1, pagesize);
+    return View(model);}*/
+
 
         // GET: Person
         public async Task<IActionResult> Index()

@@ -6,7 +6,5 @@ public class Hethongphanphoi
     [Key]
     public string MaHTPP { get; set; }
     public string TenHTPP { get; set; }
-
-    public string TenHTPP2 { get; set; } 
      public ICollection<Daily> Dailys { get; set; } 
 }

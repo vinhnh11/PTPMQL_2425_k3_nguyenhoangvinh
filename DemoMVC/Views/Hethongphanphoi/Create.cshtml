@@ -14,18 +14,13 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="MaHTPP" class="control-label"></label>
-                <input asp-for="MaHTPP" class="form-control" value="@ViewBag.NewMaHTPP" readonly />
+                <input asp-for="MaHTPP" class="form-control" readonly />
                 <span asp-validation-for="MaHTPP" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="TenHTPP" class="control-label"></label>
                 <input asp-for="TenHTPP" class="form-control" />
                 <span asp-validation-for="TenHTPP" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TenHTPP2" class="control-label"></label>
-                <input asp-for="TenHTPP2" class="form-control" />
-                <span asp-validation-for="TenHTPP2" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

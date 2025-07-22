@@ -39,16 +39,19 @@ namespace DemoMVC.Controllers
         public async Task<IActionResult> Create()
         {
             var lastHTPP = await _context.Hethongphanphois
-                .OrderByDescending(h => h.MaHTPP)
-                .FirstOrDefaultAsync();
+        .OrderByDescending(h => h.MaHTPP)
+        .FirstOrDefaultAsync();
 
-            string lastID = lastHTPP?.MaHTPP ?? "HT000";
-            var autoGen = new AutoGenerateCode();
-            string newMaHTPP = autoGen.GenerateCode(lastID);
+        string lastID = lastHTPP?.MaHTPP ?? "HT000";
+        var autoGen = new AutoGenerateCode();
+        string newMaHTPP = autoGen.GenerateCode(lastID);
 
-            ViewBag.NewMaHTPP = newMaHTPP;
+        var model = new Hethongphanphoi
+    {
+        MaHTPP = newMaHTPP
+    };
 
-            return View();
+    return View(model);
         }
 
         // POST: Hethongphanphoi/Create
